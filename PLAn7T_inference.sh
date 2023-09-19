@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# initialize conda environment (not sure how you do this for someone else's environment)
-# location of environments: /all_data/7_henry/processed/.conda/envs
-conda activate modify_nnUNet
+# initialize conda environment
+conda activate PLAn_7T
 
 # set important environment variables
 export RESULTS_FOLDER="/all_data/7_henry/processed/nnUNet/nnUNet_trained_models"
 export nnUNet_preprocessed="/all_data/7_henry/processed/nnUNet/nnUNet_preprocessed"
 export nnUNet_raw_data_base="/all_data/7_henry/processed/nnUNet/nnUNet_raw_data_base"
 
+# specify input folder of .nii or .nii.gz files
 INPUT="/all_data/7_henry/processed/nnUNet/inference_Task601/fold_0/"
+# specify output folder for segmentation results
 OUTPUT="/all_data/7_henry/processed/nnUNet/inference_Task601/fold_0/"
 
 nnUNet_predict -i "$INPUT" -o "$OUTPUT" -t 601 -tr nnUNetTrainerV2Transfer_125epochs_0p0001 -p nnUNetPlans_pretrained_3Tto7T_TRANSFER -m 3d_fullres -f 0
@@ -23,4 +24,3 @@ nnUNet_predict -i "$INPUT" -o "$OUTPUT" -t 601 -tr nnUNetTrainerV2Transfer_125ep
 
 # -p sets the "Plan Identifier" to use - this is where settings like preprocessing are defined
 # again, I used a custom planner to do the fine-tuning, so we have to set this manually
-
