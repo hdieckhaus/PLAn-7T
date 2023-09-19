@@ -1,0 +1,25 @@
+
+Steps: 
+
+
+# environment are located in /all_data/7_henry/processed/.conda
+conda create --name nnUNet_fixed python=3.8 cudatoolkit=11.3 pytorch torchvision torchaudio -c pytorch
+
+
+# if this doesn't work then try
+source ~/anaconda3/bin/activate nnUNet_fixed
+
+conda activate nnUNet_fixed
+pip install torch
+
+## this should return "True" and "NVIDIA GeForce RTX 3080"
+python -c 'import torch; print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0));'
+
+
+git clone https://github.com/MIC-DKFZ/nnUNet.git
+
+cd nnUNet
+
+pip install -e .
+
+### add custom Trainer file (nnUNetTrainerV2Transfer_125epochs_0p0001.py) into the nnunet/training/network_training folder 
