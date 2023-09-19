@@ -4,7 +4,7 @@ PLAn-7T is an MR image segmentation method optimized for processing ultra-high f
 
 This repository is a companion to the PLAn 7T paper:
 ```
-Donnay, C.*, Dieckhaus, H.*,* Tsagkas, H., Gaitán, M.I., Beck, E.S., Mullins, W., Reich, D.S., Nair, G.
+Donnay, C.*, Dieckhaus, H.*, Tsagkas, H., Gaitán, M.I., Beck, E.S., Mullins, W., Reich, D.S., Nair, G.
 Pseudo-Label Assisted nnU-Net (PLAn) Enables Automatic Segmentation of 7T MRI From a Single Acquisition.
 Under review, 2023.
 ```
