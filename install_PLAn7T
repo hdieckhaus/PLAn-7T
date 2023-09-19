@@ -1,0 +1,24 @@
+
+# create python env with dependencies
+conda create --name PLAn_7T python=3.8 cudatoolkit=11.3 pytorch torchvision torchaudio -c pytorch
+
+conda activate PLAn_7T
+
+# this should return "True" and "NVIDIA GeForce RTX 3080"
+python -c 'import torch; print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0));'
+
+conda activate PLAn_7T
+
+# install nnUNet base package
+git clone https://github.com/MIC-DKFZ/nnUNet.git
+
+cd nnUNet
+git checkout nnunetv1
+pip install -e .
+
+# set nnUNet environment variables as normally required
+
+# install PLAn 7T files
+git clone https://github.com/hdieckhaus/PLAn-7T.git
+
+# add custom PLAn 7T Trainer file (nnUNetTrainerV2Transfer_125epochs_0p0001.py) into the nnunet/training/network_training folder 
