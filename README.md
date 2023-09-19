@@ -11,6 +11,8 @@ Under review, 2023.
 
 ## Installation
 
+These details are also found in ```install_PLAn7T.txt```.
+
 To install PLAn 7T for training or inference, you first need to install the necessary python packages:
 
 ```
@@ -39,7 +41,8 @@ Finally, add the custom Trainer file **nnUNetTrainerV2Transfer_125epochs_0p0001.
 
 ## Inference
 
+See the ```PLAn7T_inference.sh``` script. Accepted input formats are .nii or .nii.gz files.
 
 ## Training
 
-
+See the ```PLAn7T_training.sh``` script. Accepted input formats are .nii or .nii.gz files.
