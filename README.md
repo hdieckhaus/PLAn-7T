@@ -14,12 +14,12 @@ Under review, 2023.
 To install PLAn 7T for training or inference, you first need to install the necessary python packages:
 
 ```
-conda create --name nnUNet_fixed python=3.8 cudatoolkit=11.3 pytorch torchvision torchaudio -c pytorch
+conda create --name PLAn_7T python=3.8 cudatoolkit=11.3 pytorch torchvision torchaudio -c pytorch
 ```
 
 You next need to install the base nnU-Net package. NOTE: PLAn 7T uses [nnU-Net v1]([url](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1)), so please be sure to install the correct version.
 ```
-conda activate nnUNet_fixed
+conda activate PLAn_7T
 
 git clone https://github.com/MIC-DKFZ/nnUNet.git
 
